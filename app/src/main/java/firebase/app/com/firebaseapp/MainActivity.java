@@ -19,7 +19,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
     @BindView(R.id.txtInputlayoutEmail)
     TextInputLayout textInputLayout;
 
@@ -34,17 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
 
-=======
-    @BindView(R.id.txt) TextView textView;
-    Spinner spinner;
->>>>>>> 9d3b96f6abc95feeca165b1a8b7b00b13de8c232
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-<<<<<<< HEAD
+
         login = (Button) findViewById(R.id.btnlogin);
         View decorView = getWindow().getDecorView();
         int i = View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -89,11 +83,7 @@ public class MainActivity extends AppCompatActivity {
 */
         return super.onOptionsItemSelected(item);
 
-=======
-        spinner = (Spinner) findViewById(R.id.spinner);
 
-
->>>>>>> 9d3b96f6abc95feeca165b1a8b7b00b13de8c232
     }
 
 }
