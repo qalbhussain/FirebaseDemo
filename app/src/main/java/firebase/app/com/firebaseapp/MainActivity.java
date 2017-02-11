@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -36,25 +38,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
         login = (Button) findViewById(R.id.btnlogin);
-        View decorView = getWindow().getDecorView();
-        int i = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(i);
-
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (email.getText().toString().equals(sEmail) && password.getText().toString().equals(sPass)) {
+              //  if (email.getText().toString().equals(sEmail) && password.getText().toString().equals(sPass)) {
                     Intent i = new Intent(getApplicationContext(), SecondActivity.class);
 
                     startActivity(i);
-                } else {
-                    textInputLayout.setError("No email");
-                }
+              //  } else {
+                //    textInputLayout.setError("No email");
+              //  }
 
             }
         });

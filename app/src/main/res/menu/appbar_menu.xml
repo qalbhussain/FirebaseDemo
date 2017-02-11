@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <item android:id="@+id/addmember"
+    <item
+        android:id="@+id/addmember"
         android:icon="@drawable/ic_supervisor_account"
         android:title="Add Member"
-        app:showAsAction="always"
-        >
-    </item>
-    <item android:id="@+id/search"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/search"
         android:icon="@drawable/ic_search"
         android:title="Search"
-        app:showAsAction="always">
-    </item>
+        app:showAsAction="always"></item>
 
     <item
         android:id="@+id/rateus"
         android:icon="@drawable/ic_star"
-        android:title="Rate Us"
-        >
+        android:title="Rate Us"></item>
+
+    <item
+        android:id="@+id/about"
+        android:title="About Us">
     </item>
+
+    <item android:title="Report"
+        android:id="@+id/report"></item>
 
 </menu>
